@@ -505,19 +505,8 @@
       
         
           
-            <p>###<br>    <plugin><br>        <groupid>org.apache.maven.plugins</groupid><br>        <artifactid>maven-jar-plugin</artifactid><br>        <version>2.3.1</version><br>        <configuration><br>            <archive><br>                <addmavendescriptor>false</addmavendescriptor><br>                <manifest><br>                    <mainclass>com.alibaba.dubbo.container.Main</mainclass><br>                    <useuniqueversions>false</useuniqueversions><br>                    <addclasspath>true</addclasspath><br>                    <classpathprefix>lib/</classpathprefix><br>                </manifest><br>                <manifestentries></manifestentries></archive></configuration></plugin></p>
-<pre><code>                &lt;Company&gt;com.baidu&lt;/Company&gt;
-                &lt;Project&gt;com.baidu.shitu&lt;/Project&gt;
-                &lt;Support&gt;baidu@qq.com&lt;/Support&gt;
-                &lt;Built-Time&gt;${maven.build.timestamp}&lt;/Built-Time&gt;
-                &lt;JAR-Version&gt;1&lt;/JAR-Version&gt;
-　　　　　　　　　　&lt;!-- 此处添加自定义的jar包 --&gt;
-                &lt;Class-Path&gt;lib/alipay-2.0.1.jar&lt;/Class-Path&gt;
-            &lt;/manifestEntries&gt;
-        &lt;/archive&gt;
-    &lt;/configuration&gt;
-&lt;/plugin&gt;
-</code></pre><p>###</p>
+            <p>###<br>    <plugin><br>        <groupid>org.apache.maven.plugins</groupid><br>        <artifactid>maven-jar-plugin</artifactid><br>        <version>2.3.1</version><br>        <configuration><br>            <archive><br>                <addmavendescriptor>false</addmavendescriptor><br>                <manifest><br>                    <mainclass>com.alibaba.dubbo.container.Main</mainclass><br>                    <useuniqueversions>false</useuniqueversions><br>                    <addclasspath>true</addclasspath><br>                    <classpathprefix>lib/</classpathprefix><br>                </manifest><br>                <manifestentries><br>                    <company>com.baidu</company><br>                    <project>com.baidu.shitu</project><br>                    <support><a href="mailto:baidu@qq.com" target="_blank" rel="noopener">baidu@qq.com</a></support><br>                    <built-time>${maven.build.timestamp}</built-time><br>                    <jar-version>1</jar-version><br>    　　　　　　　　　　<!-- 此处添加自定义的jar包 --><br>                    <class-path>lib/alipay-2.0.1.jar</class-path><br>                </manifestentries><br>            </archive><br>        </configuration><br>    </plugin></p>
+<p>###</p>
 
           
         
