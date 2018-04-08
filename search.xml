@@ -12,6 +12,18 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[shiro realm注入dubbo服务为空]]></title>
+    <url>%2F2017%2F07%2F17%2F3%2F</url>
+    <content type="text"><![CDATA[1.确定dubbo的bean要在realm之前加载 2.在realm的bean下添加一个property,把需要注入的服务设置进来,例如userService,然后在realm中创建该服务的Getter和Setter方法]]></content>
+      <categories>
+        <category>bug</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>shiro</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Today]]></title>
     <url>%2F2017%2F01%2F01%2FToday%2F</url>
     <content type="text"><![CDATA[I am very happy to build this blogThanks]]></content>
