@@ -11,7 +11,7 @@
   <entry>
     <title><![CDATA[maven添加自定义jar,编译通过,运行抛ClassNotFoundException]]></title>
     <url>%2F2018%2F04%2F08%2F2%2F</url>
-    <content type="text"><![CDATA[### org.apache.maven.plugins maven-jar-plugin 2.3.1 false com.alibaba.dubbo.container.Main false true lib/ com.baidu com.baidu.shitu baidu@qq.com ${maven.build.timestamp} 1 lib/alipay-2.0.1.jar ###]]></content>
+    <content type="text"><![CDATA[12345678910111213141516171819202122232425&lt;plugin&gt; &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt; &lt;artifactId&gt;maven-jar-plugin&lt;/artifactId&gt; &lt;version&gt;2.3.1&lt;/version&gt; &lt;configuration&gt; &lt;archive&gt; &lt;addMavenDescriptor&gt;false&lt;/addMavenDescriptor&gt; &lt;manifest&gt; &lt;mainClass&gt;com.alibaba.dubbo.container.Main&lt;/mainClass&gt; &lt;useUniqueVersions&gt;false&lt;/useUniqueVersions&gt; &lt;addClasspath&gt;true&lt;/addClasspath&gt; &lt;classpathPrefix&gt;lib/&lt;/classpathPrefix&gt; &lt;/manifest&gt; &lt;manifestEntries&gt; &lt;Company&gt;com.baidu&lt;/Company&gt; &lt;Project&gt;com.baidu.shitu&lt;/Project&gt; &lt;Support&gt;baidu@qq.com&lt;/Support&gt; &lt;Built-Time&gt;$&#123;maven.build.timestamp&#125;&lt;/Built-Time&gt; &lt;JAR-Version&gt;1&lt;/JAR-Version&gt; &lt;!-- 此处添加自定义的jar包 --&gt; &lt;Class-Path&gt;lib/alipay-2.0.1.jar&lt;/Class-Path&gt; &lt;/manifestEntries&gt; &lt;/archive&gt; &lt;/configuration&gt;&lt;/plugin&gt;]]></content>
       <tags>
         <tag>java</tag>
       </tags>
