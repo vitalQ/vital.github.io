@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="java," />
 
 
 
@@ -79,13 +79,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="vital blogs">
-<meta property="og:url" content="http://yoursite.com/categories/java/index.html">
+<meta name="description" content="###            org.apache.maven.plugins        maven-jar-plugin        2.3.1                                    false                                    com.alibaba.dubbo.container.Main">
+<meta name="keywords" content="java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="maven添加自定义jar,编译通过,运行抛ClassNotFoundException">
+<meta property="og:url" content="http://yoursite.com/2018/04/08/2/index.html">
 <meta property="og:site_name" content="vital blogs">
+<meta property="og:description" content="###            org.apache.maven.plugins        maven-jar-plugin        2.3.1                                    false                                    com.alibaba.dubbo.container.Main">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-04-08T06:47:34.063Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vital blogs">
+<meta name="twitter:title" content="maven添加自定义jar,编译通过,运行抛ClassNotFoundException">
+<meta name="twitter:description" content="###            org.apache.maven.plugins        maven-jar-plugin        2.3.1                                    false                                    com.alibaba.dubbo.container.Main">
 
 
 
@@ -115,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/java/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/04/08/2/"/>
 
 
 
 
 
-  <title>分类: java | vital blogs</title>
+  <title>maven添加自定义jar,编译通过,运行抛ClassNotFoundException | vital blogs</title>
   
 
 
@@ -150,7 +155,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -278,55 +283,189 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>java<small>分类</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/08/2/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Vital">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="vital blogs">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/04/08/3/" itemprop="url">
-              
-                <span itemprop="name">3</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">maven添加自定义jar,编译通过,运行抛ClassNotFoundException</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-04-08T14:40:53+08:00"
-              content="2018-04-08" >
-          04-08
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-08T14:34:03+08:00">
+                2018-04-08
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>###<br>    <plugin><br>        <groupid>org.apache.maven.plugins</groupid><br>        <artifactid>maven-jar-plugin</artifactid><br>        <version>2.3.1</version><br>        <configuration><br>            <archive><br>                <addmavendescriptor>false</addmavendescriptor><br>                <manifest><br>                    <mainclass>com.alibaba.dubbo.container.Main</mainclass><br>                    <useuniqueversions>false</useuniqueversions><br>                    <addclasspath>true</addclasspath><br>                    <classpathprefix>lib/</classpathprefix><br>                </manifest><br>                <manifestentries></manifestentries></archive></configuration></plugin></p>
+<pre><code>                &lt;Company&gt;com.baidu&lt;/Company&gt;
+                &lt;Project&gt;com.baidu.shitu&lt;/Project&gt;
+                &lt;Support&gt;baidu@qq.com&lt;/Support&gt;
+                &lt;Built-Time&gt;${maven.build.timestamp}&lt;/Built-Time&gt;
+                &lt;JAR-Version&gt;1&lt;/JAR-Version&gt;
+　　　　　　　　　　&lt;!-- 此处添加自定义的jar包 --&gt;
+                &lt;Class-Path&gt;lib/alipay-2.0.1.jar&lt;/Class-Path&gt;
+            &lt;/manifestEntries&gt;
+        &lt;/archive&gt;
+    &lt;/configuration&gt;
+&lt;/plugin&gt;
+</code></pre><p>###</p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/java/" rel="tag"># java</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/04/08/Today/" rel="next" title="Today">
+                <i class="fa fa-chevron-left"></i> Today
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/04/08/3/" rel="prev" title="3">
+                3 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
 
 
           </div>
@@ -334,6 +473,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNTU0My8xMjA3OQ=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -555,6 +703,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -583,6 +735,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
