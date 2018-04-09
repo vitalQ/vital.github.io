@@ -25,7 +25,7 @@
   <entry>
     <title><![CDATA[dubbo 设定超时]]></title>
     <url>%2F2017%2F09%2F08%2F5%2F</url>
-    <content type="text"><![CDATA[在conusmer中配置，以下超时时间为60秒1&lt;dubbo:reference id=&quot;volunteerService&quot; interface=&quot;cn.jufuns.residences.volunteer.api.service.VolunteerService&quot; timeout=&quot;600000&quot;/&gt; 提示： 1.consumer会在超过3秒时得到一个调用超时的异常。 2.provider中代码的执行不会因为超时而中断，在执行完毕后，会得到一个dubbo的警告。]]></content>
+    <content type="text"><![CDATA[在conusmer中配置，以下超时时间为60秒1&lt;dubbo:reference id=&quot;volunteerService&quot; interface=&quot;cn.jufuns.residences.volunteer.api.service.VolunteerService&quot; timeout=&quot;600000&quot;/&gt; 单独配置service中的某个方法的超时时间123&lt;dubbo:reference interface=&quot;cn.jufuns.residences.api.service.UserService&quot; id=&quot;userService&quot;&gt; &lt;dubbo:method name=&quot;updateUserTimeLine&quot; timeout=&quot;1000000&quot;&gt;&lt;/dubbo:method&gt; &lt;/dubbo:reference&gt; 提示： 1.consumer会在超过3秒时得到一个调用超时的异常。 2.provider中代码的执行不会因为超时而中断，在执行完毕后，会得到一个dubbo的警告。]]></content>
       <categories>
         <category>java</category>
       </categories>
@@ -41,8 +41,8 @@
         <category>bug</category>
       </categories>
       <tags>
-        <tag>shiro</tag>
         <tag>java</tag>
+        <tag>shiro</tag>
       </tags>
   </entry>
   <entry>
