@@ -23,6 +23,17 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[dubbo 设定超时]]></title>
+    <url>%2F2017%2F09%2F08%2F5%2F</url>
+    <content type="text"><![CDATA[在conusmer中配置，以下超时时间为60秒1&lt;dubbo:reference id=&quot;volunteerService&quot; interface=&quot;cn.jufuns.residences.volunteer.api.service.VolunteerService&quot; timeout=&quot;600000&quot;/&gt; 提示： 1.consumer会在超过3秒时得到一个调用超时的异常。 2.provider中代码的执行不会因为超时而中断，在执行完毕后，会得到一个dubbo的警告。]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>dubbo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[shiro realm注入dubbo服务为空]]></title>
     <url>%2F2017%2F07%2F17%2F3%2F</url>
     <content type="text"><![CDATA[1.确定dubbo的bean要在realm之前加载 2.在realm的bean下添加一个property,把需要注入的服务设置进来,例如userService,然后在realm中创建该服务的Getter和Setter方法]]></content>
