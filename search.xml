@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Tomcat上传图片显示过慢]]></title>
+    <url>%2F2018%2F04%2F14%2F7%2F</url>
+    <content type="text"><![CDATA[解决方法：在conf目录下的context.xml里添加： Tomcat8官方文档：https://tomcat.apache.org/tomcat-8.0-doc/config/resources.html]]></content>
+      <categories>
+        <category>bug</category>
+      </categories>
+      <tags>
+        <tag>tomcat</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Linux系统传输文件]]></title>
     <url>%2F2018%2F04%2F08%2F4%2F</url>
     <content type="text"><![CDATA[背景：serverA 服务器的 usera 用户免密码登录 serverB 服务器的 userb用户。1.usera 登录 serverA 服务器2.在serverA上生成密钥 : ssh-keygen -t rsa3.按回车或yes 4.ssh-copy-id userb@10.124.84.20]]></content>
@@ -53,8 +64,8 @@
         <category>bug</category>
       </categories>
       <tags>
-        <tag>java</tag>
         <tag>shiro</tag>
+        <tag>java</tag>
       </tags>
   </entry>
   <entry>
