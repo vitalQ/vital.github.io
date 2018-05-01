@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[项目启动警告：Class path contains multiple SLF4J bindings]]></title>
+    <url>%2F2018%2F05%2F02%2F8%2F</url>
+    <content type="text"><![CDATA[原因：重复绑定日志 经发现，是zookeeper的问题，官方说明：http://www.slf4j.org/codes.html#multiple_bindings 解决方案：排除slf4f和log4j 12345678910111213141516&lt;dependency&gt; &lt;groupId&gt;org.apache.zookeeper&lt;/groupId&gt; &lt;artifactId&gt;zookeeper&lt;/artifactId&gt; &lt;version&gt;3.4.12&lt;/version&gt; &lt;type&gt;pom&lt;/type&gt; &lt;exclusions&gt; &lt;exclusion&gt; &lt;groupId&gt;org.slf4j&lt;/groupId&gt; &lt;artifactId&gt;slf4j-log4j12&lt;/artifactId&gt; &lt;/exclusion&gt; &lt;exclusion&gt; &lt;groupId&gt;log4j&lt;/groupId&gt; &lt;artifactId&gt;log4j&lt;/artifactId&gt; &lt;/exclusion&gt; &lt;/exclusions&gt;&lt;/dependency&gt;]]></content>
+      <categories>
+        <category>bug</category>
+      </categories>
+      <tags>
+        <tag>slf4j</tag>
+        <tag>zookeeper</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Tomcat上传图片显示过慢]]></title>
     <url>%2F2018%2F04%2F14%2F7%2F</url>
     <content type="text"><![CDATA[解决方法：在conf目录下的context.xml里添加： Tomcat8官方文档：https://tomcat.apache.org/tomcat-8.0-doc/config/resources.html]]></content>
@@ -64,8 +76,8 @@
         <category>bug</category>
       </categories>
       <tags>
-        <tag>java</tag>
         <tag>shiro</tag>
+        <tag>java</tag>
       </tags>
   </entry>
 </search>
